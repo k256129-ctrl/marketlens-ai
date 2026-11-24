@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 
 function formatPKR(amount) {
   return `Rs. ${Number(amount || 0).toLocaleString("en-PK", { maximumFractionDigits: 0 })}`;

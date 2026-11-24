@@ -10,7 +10,7 @@
 - **Backend:** Python 3.11+, FastAPI, SQLAlchemy 2.0 ORM, Pydantic v2 validation, OpenAPI/Swagger documentation.
 - **Database:** SQLite (`marketlens.db`) out of the box for instant zero-config local development; PostgreSQL-ready via `DATABASE_URL`.
 - **Standard Ports:**
-  - Backend API: `http://localhost:8000` (Swagger UI: `http://localhost:8000/docs`)
+  - Backend API: `` (Swagger UI: `/docs`)
   - Frontend App: `http://localhost:5173`
 
 ---

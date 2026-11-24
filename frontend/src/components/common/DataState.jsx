@@ -54,7 +54,7 @@ export function ErrorState({ title = "Unable to load data", message, onRetry }) 
       </div>
       <h3 style={{ fontSize: "1.1rem" }}>{title}</h3>
       <p style={{ maxWidth: 480, fontSize: "0.875rem", color: "var(--color-text-secondary)", lineHeight: 1.5 }}>
-        {message || "An API request failed. Ensure the FastAPI backend is running on http://localhost:8000."}
+        {message || "An API request failed. Ensure the FastAPI backend is running on ."}
       </p>
       {onRetry && (
         <button className="btn btn-primary" onClick={onRetry} style={{ marginTop: 6 }}>

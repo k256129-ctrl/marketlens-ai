@@ -10,7 +10,7 @@ import Inventory from "./pages/Inventory";
 import Businesses from "./pages/Businesses";
 import LocationFinder from "./pages/LocationFinder";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 
 function AuthGate({ onLogin }) {
   const [mode, setMode] = useState("login");
