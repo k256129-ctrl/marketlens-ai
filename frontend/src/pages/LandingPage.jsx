@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const API_BASE = (import.meta.env.VITE_API_URL || "http://127.0.0.1:8000").replace(/\/$/, "");
+const API_BASE = (import.meta.env.VITE_API_URL || "http://").replace(/\/$/, "");
 
 export default function LandingPage({ onLogin }) {
   const [mode, setMode] = useState("signin"); // "signin" | "signup" | "forgot"
