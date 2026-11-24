@@ -1,5 +1,6 @@
 const API_BASE_URL = (
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:8000/api/v1"
+  import.meta.env.VITE_API_BASE_URL ||
+  (import.meta.env.PROD ? "/api/v1" : "http://localhost:8000/api/v1")
 ).replace(/\/$/, "");
 
 class ApiError extends Error {
@@ -26,7 +27,7 @@ async function request(path, options = {}) {
     response = await fetch(url, config);
   } catch (networkErr) {
     throw new ApiError(
-      "Cannot reach MarketLens API server on port 8000. Verify the FastAPI backend is running.",
+      "Cannot reach MarketLens API server. Verify the FastAPI backend is running.",
       0
     );
   }
