@@ -63,6 +63,16 @@ def create_application() -> FastAPI:
     app.include_router(products.router, prefix=prefix)
     app.include_router(inventory.router, prefix=prefix)
     app.include_router(locations.router, prefix=prefix)
+    prefix = settings.API_PREFIX
+    app.include_router(health.router, prefix=prefix)
+    app.include_router(auth.router)
+    app.include_router(auth.router, prefix="/api")
+    app.include_router(dashboard.router, prefix=prefix)
+    app.include_router(categories.router, prefix=prefix)
+    app.include_router(businesses.router, prefix=prefix)
+    app.include_router(products.router, prefix=prefix)
+    app.include_router(inventory.router, prefix=prefix)
+    app.include_router(locations.router, prefix=prefix)
 
     # Guarantee /api/products & /api/inventory always work regardless of API_PREFIX
     if prefix != "/api":
